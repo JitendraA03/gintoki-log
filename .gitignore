@@ -1,0 +1,11 @@
+.next
+node_modules
+out
+dist
+.env
+.env*.local
+*.log
+.DS_Store
+tsconfig.tsbuildinfo
+Blog Website/
+ChatGPT Image May 23, 2026, 08_12_31 PM.png

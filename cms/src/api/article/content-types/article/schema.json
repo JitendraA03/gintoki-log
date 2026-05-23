@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Long-form blog posts for gintoki.log"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "dek": {
+      "type": "text"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "category": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "default": "essay"
+    },
+    "author": {
+      "type": "string",
+      "default": "Gintoki"
+    },
+    "date": {
+      "type": "date"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "enumeration",
+      "enum": ["cricket", "anime", "music", "default"],
+      "default": "default"
+    },
+    "coverImage": {
+      "type": "string"
+    },
+    "coverCaption": {
+      "type": "text"
+    },
+    "contentBlocks": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
