@@ -126,7 +126,8 @@ const fallbackPosts: BlogPost[] = [
   },
 ];
 
-const strapiUrl = process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_URL;
+const strapiEnabled = process.env.ENABLE_STRAPI === "true";
+const strapiUrl = strapiEnabled ? process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_URL : undefined;
 const strapiToken = process.env.STRAPI_API_TOKEN;
 
 function normalizePost(raw: any): BlogPost {
