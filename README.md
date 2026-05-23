@@ -55,15 +55,17 @@ Push this repository to GitHub, configure the env vars above in the deployment p
 Recommended production split:
 
 - Deploy the Next.js frontend from the repository root on Vercel.
-- Deploy Strapi from `cms/` on Render using `render.yaml`.
-- Use PostgreSQL in production. SQLite is only for local development.
+- Deploy Strapi from `cms/` on Koyeb.
+- Use Neon Postgres in production. SQLite is only for local development.
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for the full Vercel + Koyeb + Neon flow.
 
 Vercel frontend environment variables:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-vercel-domain.vercel.app
-NEXT_PUBLIC_STRAPI_URL=https://your-render-strapi-domain.onrender.com
-STRAPI_API_URL=https://your-render-strapi-domain.onrender.com
-STRAPI_ADMIN_URL=https://your-render-strapi-domain.onrender.com/admin
+NEXT_PUBLIC_STRAPI_URL=https://your-koyeb-service.koyeb.app
+STRAPI_API_URL=https://your-koyeb-service.koyeb.app
+STRAPI_ADMIN_URL=https://your-koyeb-service.koyeb.app/admin
 STRAPI_API_TOKEN=
 ```

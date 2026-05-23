@@ -10,6 +10,13 @@ npx create-strapi-app@latest cms
 
 Choose TypeScript and your preferred database. For a small personal blog, SQLite is fine locally; use Postgres for production.
 
+For the hosted CMS, use Neon Postgres and set these Strapi env vars on Koyeb:
+
+```bash
+DATABASE_CLIENT=postgres
+DATABASE_URL=<your-neon-connection-string>
+```
+
 ## Public API Permissions
 
 In Strapi:
